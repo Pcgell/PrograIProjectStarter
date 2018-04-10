@@ -56,7 +56,7 @@ public class DynArray {
 
     public boolean isEmpty(){
 
-        
+
         return false;
     }
 }
