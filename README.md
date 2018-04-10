@@ -1,6 +1,6 @@
 # PrograIProjectStarter
 
-Codigo para el projector del parcial III
+Codigo para el proyecto del parcial III
 
 
 el Proyecto consiste en un sistema informatico para un supermercado.
