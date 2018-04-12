@@ -1,11 +1,15 @@
-public class DynArray {
+public class ProductDynArray {
 
     private Product[] items;
     private int size;
 
-    public DynArray() {
+    public ProductDynArray() {
         this.items = new Product[3];
         size = 0;
+    }
+
+    public Product getProduct(int index){
+        return items[index];
     }
 
     public int getSize() {

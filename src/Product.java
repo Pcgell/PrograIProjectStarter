@@ -23,4 +23,9 @@ public class Product {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %f",nombre,precio);
+    }
 }
