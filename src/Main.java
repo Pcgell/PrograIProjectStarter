@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ProductDynArray pda = new ProductDynArray();
-        ProductFileIO pfio = new ProductFileIO();
+        DynArray<Product> pda = new DynArray<>();
+        FileIO pfio = new FileIO("products.csv");
 
         //* escribir archivo..
         pda.add(new Product("banana ,",3.25f));
@@ -30,7 +30,7 @@ public class Main {
         //*/
 
         for (int i = 0; i < pda.getSize(); i++) {
-            System.out.println(pda.getProduct(i));
+            System.out.println(pda.getItem(i));
         }
 
 

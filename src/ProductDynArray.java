@@ -1,4 +1,4 @@
-public class ProductDynArray {
+public class ProductDynArray implements Lista{
 
     private Product[] items;
     private int size;
@@ -14,6 +14,11 @@ public class ProductDynArray {
 
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public Object getItem(int index) {
+        return getProduct(index);
     }
 
     /**
@@ -47,20 +52,27 @@ public class ProductDynArray {
      * @param index: index of the object to be removed.
      * @return true if it removes the item successfully.
      */
-    public boolean remove(int index){
+    public Product remove(int index){
         if(index >= size)
-            return false;
+            return null;
+        Product retval = items[index];
 
         for (int i = index + 1; i < size ; i++) {
             items[i-1] = items[i];
         }
         size--;
-        return true;
+        return retval;
+    }
+
+    @Override
+    public void add(Object data) {
+        this.add((Product) data);
     }
 
     public boolean isEmpty(){
 
-
+        if(size == 0)
+            return true;
         return false;
     }
 }
